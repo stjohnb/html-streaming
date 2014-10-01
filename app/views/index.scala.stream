@@ -1,0 +1,19 @@
+@(content: ui.HtmlStream)
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My shop</title>
+    <link rel='stylesheet' href='@routes.Assets.at("stylesheets/index.css")'>
+  </head>
+  <body>
+    <div>
+        <h1>My shop</h1>
+
+      <div id="cart"></div>
+      <div id="waitlist"></div>
+    </div>
+
+    @content
+  </body>
+</html>
