@@ -1,19 +1,49 @@
 @(content: ui.HtmlStream)
 
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My shop</title>
-    <link rel='stylesheet' href='@routes.Assets.at("stylesheets/index.css")'>
-  </head>
-  <body>
-    <div>
-        <h1>My shop</h1>
+<html lang="en">
 
-      <div id="cart"></div>
-      <div id="waitlist"></div>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>HTML Streaming Demo</title>
+
+    <link rel='stylesheet' href='@routes.Assets.at("stylesheets/bootstrap.css")'>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">HTML Streaming demo</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href='@routes.MainController.index'>Normal</a></li>
+                    <li><a href='@routes.MainController.andThen'>andThen</a></li>
+                    <li><a href='@routes.MainController.interleaved'>Interleaved</a></li>
+                    <li><a href='@routes.MainController.full'>Full</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 
-    @content
-  </body>
+    <div class="jumbotron">
+        <h1>Streaming</h1>
+
+        @content
+
+
+    </div>
+
+</div>
+
+</body>
 </html>

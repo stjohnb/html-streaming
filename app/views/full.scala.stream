@@ -1,4 +1,4 @@
-@(cartBody: Html, waitlistBody: Html)
+@(content: ui.HtmlStream)
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,14 +34,17 @@
             </div>
         </div>
     </div>
+
     <div class="jumbotron">
-        <h1>Non-streaming</h1>
-        @cartBody
-        @waitlistBody
+        <h1>Streaming</h1>
+
+        <div id="cart"></div>
+        <div id="waitlist"></div>
 
     </div>
 
 </div>
 
+@content
 </body>
 </html>

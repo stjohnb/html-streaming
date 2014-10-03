@@ -50,10 +50,6 @@ object HtmlStreamFormat extends Format[HtmlStream] {
   def escape(text: String): HtmlStream = {
     raw(HtmlFormat.escape(text).body)
   }
-
-  def empty: HtmlStream = HtmlStream("")
-
-  def fill(elements: scala.collection.immutable.Seq[HtmlStream]): HtmlStream = HtmlStream.interleave(elements:_*)
 }
 
 object HtmlStreamImplicits {
