@@ -2,7 +2,10 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-GET     /                           controllers.MainController.index
+GET     /index                      controllers.MainController.index
+GET     /helloEnumerator            controllers.MainController.helloEnumerator
+GET     /repeat                     controllers.MainController.repeat
+GET     /enumerators                controllers.MainController.enumerators
 GET     /andThen                    controllers.MainController.andThen
 GET     /interleaved                controllers.MainController.interleaved
 GET     /full                       controllers.MainController.full
