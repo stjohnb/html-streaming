@@ -22,7 +22,7 @@ sbt run
 Alternatively, create a local `application.conf` override or pass it as a system property:
 
 ```bash
-sbt -Dplay.crypto.secret="your-secure-secret-here" run
+sbt -Dapplication.secret="your-secure-secret-here" run
 ```
 
 **Never commit actual secrets to version control.** Use environment variables or external configuration management for production deployments.
