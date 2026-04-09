@@ -12,6 +12,8 @@ This is a standard [Play Framework](http://www.playframework.com/) app, built on
 
 **Important**: Before running this application, you must provide a secure application secret. The default placeholder value in `conf/application.conf` must be overridden.
 
+> **Security note**: A previous version of this repository contained a hardcoded secret in git history (commit `9506bd5`). That secret should be treated as compromised and must not be reused.
+
 Set the `APPLICATION_SECRET` environment variable:
 
 ```bash
@@ -19,7 +21,13 @@ export APPLICATION_SECRET="your-secure-secret-here"
 sbt run
 ```
 
-Alternatively, create a local `application.conf` override or pass it as a system property:
+Alternatively, pass it as a JVM property feeding the HOCON substitution directly:
+
+```bash
+sbt -DAPPLICATION_SECRET="your-secure-secret-here" run
+```
+
+Or override `application.secret` directly via JVM property:
 
 ```bash
 sbt -Dapplication.secret="your-secure-secret-here" run
