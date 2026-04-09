@@ -14,7 +14,7 @@ public class IntegrationTest {
         running(testServer(3333, fakeApplication(inMemoryDatabase())), HTMLUNIT, new Callback<TestBrowser>() {
             public void invoke(TestBrowser browser) {
                 browser.goTo("http://localhost:3333");
-                assertThat(browser.pageSource()).contains("My shop");
+                assertThat(browser.pageSource()).contains("HTML Streaming demo");
             }
         });
     }
@@ -24,7 +24,7 @@ public class IntegrationTest {
         running(testServer(3333, fakeApplication(inMemoryDatabase())), HTMLUNIT, new Callback<TestBrowser>() {
             public void invoke(TestBrowser browser) {
                 browser.goTo("http://localhost:3333/andThen");
-                assertThat(browser.pageSource()).contains("My shop");
+                assertThat(browser.pageSource()).contains("HTML Streaming demo");
             }
         });
     }
@@ -34,7 +34,7 @@ public class IntegrationTest {
         running(testServer(3333, fakeApplication(inMemoryDatabase())), HTMLUNIT, new Callback<TestBrowser>() {
             public void invoke(TestBrowser browser) {
                 browser.goTo("http://localhost:3333/interleaved");
-                assertThat(browser.pageSource()).contains("My shop");
+                assertThat(browser.pageSource()).contains("HTML Streaming demo");
             }
         });
     }
@@ -44,7 +44,7 @@ public class IntegrationTest {
         running(testServer(3333, fakeApplication(inMemoryDatabase())), HTMLUNIT, new Callback<TestBrowser>() {
             public void invoke(TestBrowser browser) {
                 browser.goTo("http://localhost:3333/full");
-                assertThat(browser.pageSource()).contains("My shop");
+                assertThat(browser.pageSource()).contains("HTML Streaming demo");
             }
         });
     }
