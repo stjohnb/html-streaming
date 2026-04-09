@@ -21,8 +21,7 @@ app/
 │   ├── waitlist.scala.html     # Waitlist content component (green)
 │   └── pagelet.scala.html      # Pagelet wrapper (renders `<script>` injection tag)
 └── assets/
-    ├── stylesheets/index.less
-    └── javascripts/index.js
+    └── stylesheets/index.less
 conf/
 ├── application.conf            # App secret, logging levels
 └── routes                      # 6 GET endpoints → MainController
